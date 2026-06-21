@@ -2,55 +2,59 @@
 const works = [
     {
         title: "Гобелен «Ночь»",
-        image: "images/works/noch.jpg.jpg"
+        image: "images/works/noch.jpg.jpg",
+        details: "60×80 см, ручное ткачество, шерсть",
+        story: "Создаёт ощущение тишины и глубины. Идеально для спальни или кабинета, где хочется уединения и покоя.",
+        status: "Доступен для заказа"
     },
     {
         title: "Гобелен «Облако»",
-        image: "images/works/oblako.jpg.jpg"
+        image: "images/works/oblako.jpg.jpg",
+        details: "45×60 см, punch needle, хлопок",
+        story: "Лёгкое и воздушное панно, которое наполняет комнату светом. Прекрасно смотрится в гостиной или детской.",
+        status: "Продано"
     },
     {
         title: "«Лошадка» гобелен",
-        image: "images/works/loshadka.jpg.jpg"
+        image: "images/works/loshadka.jpg.jpg",
+        details: "50×70 см, ручное ткачество, шерсть",
+        story: "Динамичный и фактурный. Станет центром притяжения в прихожей или кабинете. Дарит ощущение движения и свободы.",
+        status: "Доступен для заказа"
     },
     {
         title: "Вышивка «Цветок»",
-        image: "images/works/ofw30.jpg.jpg"
+        image: "images/works/ofw30.jpg.jpg",
+        details: "30×30 см, punch needle, хлопок",
+        story: "Камерная работа с нежной фактурой. Оживит небольшую стену или станет красивым подарком для близкого человека.",
+        status: "Доступна для заказа"
     },
     {
         title: "Гобелен «Ангел и собаки»",
-        image: "images/works/lKm11.jpg.jpg"
+        image: "images/works/lKm11.jpg.jpg",
+        details: "70×90 см, ручное ткачество, шерсть",
+        story: "Сюжетная работа с глубоким смыслом. Защищает пространство и создаёт уют. Подойдёт для гостиной или домашней библиотеки.",
+        status: "Продано"
     }
 ];
 
-// === 1.5. АВАТАР ===
+// === АВАТАР ===
 function renderAvatar() {
     const avatarContainer = document.getElementById('avatarContainer');
-    
     if (!avatarContainer) return;
     
-    // Пробуем разные варианты имени файла
-    const avatarPath = "images/avatar.jpg.jpg";  // ← поменяй на своё имя
-    
-    // Создаём элемент картинки
     const img = document.createElement('img');
-    img.src = avatarPath;
+    img.src = "images/avatar.jpg";
     img.alt = "Фото Кати";
-    
-    // Добавляем класс для стилей (опционально)
     img.classList.add('avatar-image');
     
-    // Очищаем контейнер и вставляем картинку
     avatarContainer.innerHTML = '';
     avatarContainer.appendChild(img);
 }
 
-// Функция, которая создаёт галерею
 function renderGallery() {
     const galleryContainer = document.getElementById('gallery');
-    
-    // Если контейнера нет — просто выходим, не падаем
     if (!galleryContainer) {
-        console.log('Контейнер #gallery не найден, пропускаем инициализацию галереи');
+        console.log('Контейнер #gallery не найден');
         return;
     }
     
@@ -67,60 +71,105 @@ function renderGallery() {
         
         galleryItem.innerHTML = `
             <img src="${work.image}" alt="${work.title}">
-            <div class="gallery__overlay">${work.title}</div>
+            <div class="gallery__info">
+                <h4>${work.title}</h4>
+                <p class="gallery__details">${work.details}</p>
+                <p class="gallery__story">${work.story}</p>
+                <span class="gallery__status ${work.status === 'Продано' ? 'status--sold' : 'status--available'}">${work.status}</span>
+            </div>
         `;
         
-        galleryItem.addEventListener('click', () => {
-            alert(`Открыть работу: ${work.title}`);
+        // ===== МОДАЛЬНОЕ ОКНО: ТОЛЬКО КАРТИНКА =====
+        const img = galleryItem.querySelector('img');
+        img.addEventListener('click', (e) => {
+            e.stopPropagation();
+            
+            const modal = document.createElement('div');
+            modal.className = 'modal';
+            modal.innerHTML = `
+                <span class="modal__close">&times;</span>
+                <div class="modal__content">
+                    <img src="${work.image}" alt="${work.title}" class="modal__image">
+                </div>
+            `;
+            document.body.appendChild(modal);
+            document.body.style.overflow = 'hidden';
+            
+            // Закрытие по крестику
+            modal.querySelector('.modal__close').addEventListener('click', (e) => {
+                e.stopPropagation();
+                modal.remove();
+                document.body.style.overflow = 'auto';
+            });
+            
+            // Закрытие по клику на фон (на сам modal)
+            modal.addEventListener('click', () => {
+                modal.remove();
+                document.body.style.overflow = 'auto';
+            });
         });
         
         galleryContainer.appendChild(galleryItem);
     });
 }
 
-  try {
-        renderAvatar();          // ← добавить эту строку
-    } catch (error) {
-        console.warn("Аватар не загружен:", error.message);
-    }
-
-// === 2. БАННЕР COOKIE ===
+// === БАННЕР COOKIE ===
 function initCookieBanner() {
     const cookieConsent = document.getElementById('cookieConsent');
     const acceptBtn = document.getElementById('acceptCookies');
     
-    // Если баннера нет на странице — выходим
     if (!cookieConsent || !acceptBtn) {
-        console.log('Баннер cookie не найден на странице');
+        console.log('Баннер cookie не найден');
         return;
     }
     
-    // Проверяем, было ли уже согласие
     if (localStorage.getItem('cookieConsent') === 'true') {
         cookieConsent.style.display = 'none';
         return;
     }
     
-    // Навешиваем обработчик на кнопку
     acceptBtn.addEventListener('click', () => {
         cookieConsent.style.display = 'none';
         localStorage.setItem('cookieConsent', 'true');
     });
 }
 
-// === 3. ЗАПУСК ВСЕГО ПРИ ЗАГРУЗКЕ СТРАНИЦЫ ===
+// === АНИМАЦИЯ ПРИ СКРОЛЛЕ ===
+function handleScrollAnimations() {
+    const animatedElements = document.querySelectorAll('.section, .service-card, .exhibition-block');
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.01 });
+    
+    animatedElements.forEach(el => observer.observe(el));
+}
+
+// === ЗАПУСК ===
 document.addEventListener('DOMContentLoaded', () => {
-    // Безопасный запуск галереи
+    try {
+        renderAvatar();
+    } catch (error) {
+        console.warn("Аватар не загружен:", error.message);
+    }
+    
     try {
         renderGallery();
     } catch (error) {
         console.warn("Галерея не инициализирована:", error.message);
     }
-
-    // Безопасный запуск баннера
+    
     try {
         initCookieBanner();
     } catch (error) {
         console.error("Ошибка баннера cookie:", error.message);
     }
+    
+    setTimeout(handleScrollAnimations, 300);
 });
+
+console.log('✅ Скрипт запущен! Количество работ:', works.length);
