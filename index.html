@@ -16,112 +16,252 @@
                     <a href="#home">Katia & threads</a>
                 </div>
                 <nav class="nav">
-                    <a href="#about" class="nav__link">Обо мне</a>
-                    <a href="#portfolio" class="nav__link">Портфолио</a>
-                    <a href="#services" class="nav__link">Услуги</a>
-                    <a href="#contacts" class="nav__link">Контакты</a>
-                </nav>
+    <a href="#about" class="nav__link">Обо мне</a>
+    <a href="#philosophy" class="nav__link">Творчество</a> <!-- Новый пункт -->
+    <a href="#portfolio" class="nav__link">Портфолио</a>
+    <a href="#services" class="nav__link">Услуги</a>
+    <a href="#contacts" class="nav__link">Контакты</a>
+</nav>
             </div>
         </div>
     </header>
 
     <!-- ГЛАВНЫЙ ЭКРАН (HERO) -->
-    <section class="hero" id="home">
-        <div class="container">
-            <div class="hero__content">
-                <h1 class="hero__title">Гобелены, вышивка <br>и ткачество</h1>
-                <p class="hero__subtitle">Член Союза художников России. Создаю уникальные текстильные работы на заказ.</p>
-                <a href="#contacts" class="btn btn--primary">Связаться</a>
+<section class="hero" id="home">
+    <div class="container">
+        <div class="hero__content">
+            <!-- 1. Обновлённый заголовок и текст -->
+            <h1 class="hero__title">Тканые истории. <br>Гобелены и вышивка Екатерины Борисовой</h1>
+            <p class="hero__subtitle">Современный художник, работающий в технике ручного ткачества и ковровой вышивки. Член Союза художников России.</p>
+            <p class="hero__description">Создаю тактильные, живые поверхности из нити. Исследую природу, душу и состояние сна. Мои работы — в частных коллекциях в России и за рубежом.</p>
+            
+            <!-- 2. Две кнопки вместо одной -->
+            <div class="hero__buttons">
+                <a href="#portfolio" class="btn btn--primary">Смотреть работы</a>
+                <a href="#services" class="btn btn--secondary">Заказать гобелен</a>
+            </div>
+
+            <!-- 3. НОВЫЙ БЛОК ДОВЕРИЯ -->
+            <div class="hero__trust">
+                <div class="trust-item">✧ Член Союза художников России</div>
+                <div class="trust-item">✧ Выставки в Москве, Санкт-Петербурге, Нижнем Новгороде и за рубежом</div>
+                <div class="trust-item">✧ Работы в частных коллекциях в России, Европе, на Дальнем Востоке</div>
+                <div class="trust-item">✧ Преподаю ткачество и вышивку</div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- БЛОК "ОБО МНЕ" -->
-    <section class="about section" id="about">
-        <div class="container">
-            <h2 class="section__title">Обо мне</h2>
-            <div class="about__inner">
-                <div class="about__content">
-                    <p>🔸Работаю в древней технике ручного ткачества и ковровой вышивки (punch needle)</p>
-<p>🔸Делаю гобелены на заказ с учетом ваших пожеланий</p>
-<p>🔸Провожу мастер - классы и уроки по ткачеству онлайн и оффлайн</p>
-<p>🔸Обыкновенная столовая вилка - мой главный инструмент в создании гобеленов</p>
-                    <p>Если вы хотите  заказать гобелен или вышивку, можно написать в сообщения моего сообщества в вк или на электронную почту, а в папке "Товары" есть все свободные работы.</p>
-                    <div class="about__fact">
-                        🍴<strong>Обыкновенная столовая вилка</strong> — мой главный инструмент в создании гобеленов
-                    </div>
-                </div>
-                <div class="about__photo">
-                    <img src="https://sun9-73.userapi.com/s/v1/ig2/2Spj5GugH6yt34yp0XtWNec6mMcDCOlUGK9L7ISmfYsFMYDGRdjZ2AapopF9ulJwznFRIXICuch5-UKYKUOfTqSo.jpg?quality=95&as=32x48,48x73,72x109,108x163,160x242,240x363,360x544,480x725,540x816,640x967,720x1088,740x1118&from=bu&u=mu0EAknymxBGoZk4RfmlBYRNIrB7TILedEvBCsPl4-M&cs=740x0" alt="Фото Кати">
+<section class="about section" id="about">
+    <div class="container">
+        <h2 class="section__title">Обо мне</h2>
+        <div class="about__inner">
+            <div class="about__content">
+               <p>✧Создаю современные гобелены и интерьерный декор в аутентичных техниках ручного ткачества и ковровой вышивки (punch needle).</p> 
+               <p>✧Воплощаю в жизнь индивидуальные заказы любой сложности, гармонично вписывая текстильное искусство в ваш интерьер.</p> 
+               <p>✧Делюсь мастерством на онлайн- и офлайн-обучении для начинающих и профессионалов.</p>
+<div class="about__fact">
+    🛠️ <strong>Секрет мастерства:</strong> обыкновенная столовая вилка — мой незаменимый инструмент для плотной прибивки утка, благодаря которому каждый гобелен получается безупречно ровным и долговечным.
+</div>
+                <p>Если вы хотите заказать гобелен или вышивку, напишите мне в сообщения сообщества VK или на электронную почту.</p>
+            </div>
+            <div class="about__photo-wrapper"> <!-- Новая обёртка для вращения -->
+                <div class="about__photo" id="avatarContainer">
+                    <!-- Сюда JavaScript добавит картинку -->
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- БЛОК "ПОРТФОЛИО" (ГАЛЕРЕЯ) -->
+    <!-- БЛОК "О ТВОРЧЕСТВЕ" -->
+<!-- БЛОК "О ТВОРЧЕСТВЕ" с классом section--dark -->
+<section class="philosophy section section--dark" id="philosophy">
+    <div class="container">
+        <!-- Заголовок остаётся без изменений -->
+        <div class="philosophy__content">
+            <p>Я работаю преимущественно с текстилем. Мне близка его тактильная и живая поверхность. Эта техника даёт большой простор для экспериментов.</p>
+            <p>Чаще всего я создаю свои работы интуитивно, сочетая цвет, фактуру переплетений и вышивку. Стремлюсь создать природную поверхность при помощи плотного и объёмного ткачества, с растительной внимательностью к орнаменту и большой любовью к глубоким, фигуративным сюжетам.</p>
+            <p>В своих работах я исследую состояния — природы, души человека. Моя любимая тема сейчас — сон, ночь. Это наиболее хрупкое, уязвимое состояние, и вместе с тем — глубинное, дающее простор для поиска.</p>
+        </div>
+    </div>
+</section>
+
+<!-- БЛОК "ПОЧЕМУ ВЫБИРАЮТ" -->
+<section class="benefits section" id="benefits">
+    <div class="container">
+        <h2 class="section__title">Почему выбирают мои работы</h2>
+        <div class="benefits__grid">
+            <div class="benefit-item">
+                <h3>Живая фактура</h3>
+                <p>Мои работы нельзя напечатать. Рельеф, переплетения, объём — это ручная работа, которую хочется трогать.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Глубокие сюжеты</h3>
+                <p>Я исследую сны, природу, состояния души. Каждая работа — не просто декор, а история.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Долговечность</h3>
+                <p>Качественная окрашенная пряжа не выцветает. Гобелен сохраняет яркость десятилетиями.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Уникальность</h3>
+                <p>Даже если я повторю сюжет, фактура будет другой. Вы получаете единственный экземпляр.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- БЛОК "ВЫСТАВКИ" -->
+<section class="exhibitions section" id="exhibitions">
+    <div class="container">
+        <h2 class="section__title">Выставки и проекты</h2>
+        <div class="exhibitions__grid">
+            
+            <!-- Персональные выставки -->
+            <div class="exhibition-block">
+                <h3>Персональные выставки</h3>
+                <ul>
+                    <li><span class="exhibition-year">2026</span> «Тропинка из детства», Пермь</li>
+                    <li><span class="exhibition-year">2024</span> «Моя песнь», Пермь</li>
+                    <li><span class="exhibition-year">2024</span> «Мой дом», Пермь</li>
+                </ul>
+            </div>
+            
+            <!-- Групповые проекты -->
+            <div class="exhibition-block">
+                <h3>Групповые проекты</h3>
+                <ul>
+                    <li><span class="exhibition-year">2026</span> «Сага о птицах», Пермь</li>
+                    <li><span class="exhibition-year">2025</span> «Я есть», Соликамск</li>
+                    <li><span class="exhibition-year">2024</span> «Кто рассыпал эти звёзды», Пермь</li>
+                    <li><span class="exhibition-year">2021</span> «Платье», Москва</li>
+                    <li><span class="exhibition-year">2019</span> «Россия XIII», Москва</li>
+                    <li><span class="exhibition-year">2018</span> «Большая Волга XII», Нижний Новгород</li>
+                    <li><span class="exhibition-year">2012</span> «Пейзаж-2012», Кириллов</li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+<!-- БЛОК "ПОРТФОЛИО" (ГАЛЕРЕЯ) -->
 <section class="portfolio section" id="portfolio">
     <div class="container">
         <h2 class="section__title">Мои работы</h2>
+        
+        <p class="portfolio__intro">Каждый гобелен — это история, рассказанная нитью. Я создаю работы, которые хочется рассматривать и трогать.</p>
+        
         <div class="gallery" id="gallery">
-            
             <!-- КАРТОЧКА 1: Гобелен "Ночь" -->
             <div class="gallery__item">
                 <img src="images/works/noch.jpg.jpg" alt="Гобелен Ночь">
-                <div class="gallery__overlay">Гобелен «Ночь»</div>
+                <div class="gallery__info">
+                    <h4>Гобелен «Ночь»</h4>
+                    <p class="gallery__details">60×80 см · ручное ткачество · шерсть</p>
+                    <p class="gallery__story">Создаёт ощущение тишины и глубины. Идеально для спальни или кабинета.</p>
+                    <span class="gallery__status status--available">Доступен для заказа</span>
+                </div>
             </div>
 
             <!-- КАРТОЧКА 2: Гобелен "Облако" -->
             <div class="gallery__item">
                 <img src="images/works/oblako.jpg.jpg" alt="Гобелен Облако">
-                <div class="gallery__overlay">Гобелен «Облако»</div>
+                <div class="gallery__info">
+                    <h4>Гобелен «Облако»</h4>
+                    <p class="gallery__details">45×60 см · punch needle · хлопок</p>
+                    <p class="gallery__story">Лёгкое и воздушное панно. Прекрасно смотрится в гостиной или детской.</p>
+                    <span class="gallery__status status--sold">Продано</span>
+                </div>
             </div>
 
             <!-- КАРТОЧКА 3: Гобелен "Лошадка" -->
             <div class="gallery__item">
                 <img src="images/works/loshadka.jpg.jpg" alt="Лошадка гобелен">
-                <div class="gallery__overlay">Гобелен «Лошадка»</div>
+                <div class="gallery__info">
+                    <h4>Гобелен «Лошадка»</h4>
+                    <p class="gallery__details">50×70 см · ручное ткачество · шерсть</p>
+                    <p class="gallery__story">Динамичный и фактурный. Станет центром притяжения в прихожей.</p>
+                    <span class="gallery__status status--available">Доступен для заказа</span>
+                </div>
             </div>
 
             <!-- КАРТОЧКА 4: Вышивка "Цветок" -->
             <div class="gallery__item">
                 <img src="images/works/ofw30.jpg.jpg" alt="Вышивка Цветок">
-                <div class="gallery__overlay">Вышивка «Цветок»</div>
+                <div class="gallery__info">
+                    <h4>Вышивка «Цветок»</h4>
+                    <p class="gallery__details">30×30 см · punch needle · хлопок</p>
+                    <p class="gallery__story">Камерная работа с нежной фактурой. Красивый подарок.</p>
+                    <span class="gallery__status status--available">Доступна для заказа</span>
+                </div>
             </div>
 
-             <!-- КАРТОЧКА 5: Гобелен "Ангел и собаки" -->
+            <!-- КАРТОЧКА 5: Гобелен "Ангел и собаки" -->
             <div class="gallery__item">
                 <img src="images/works/lKm11.jpg.jpg" alt="Гобелен Ангел и собаки">
-                <div class="gallery__overlay">Гобелен «Ангел и собаки»</div>
+                <div class="gallery__info">
+                    <h4>Гобелен «Ангел и собаки»</h4>
+                    <p class="gallery__details">70×90 см · ручное ткачество · шерсть</p>
+                    <p class="gallery__story">Сюжетная работа с глубоким смыслом. Создаёт уют и защищает пространство.</p>
+                    <span class="gallery__status status--sold">Продано</span>
+                </div>
             </div>
-            
         </div>
-        <!-- А здесь, ПОСЛЕ ГАЛЕРЕИ, можно разместить общее описание или примечание -->
+        
         <div class="portfolio-note">
-            <p>Уютные тканые панно на стену, созданные в технике ручного ткачества. Некоторые работы уже проданы, но возможен повтор по вашему желанию. Цена зависит от размера и сложности. Свяжитесь со мной, чтобы обсудить ваш будущий гобелен!</p>
+            <p>💡 Некоторые работы уже проданы, но возможен повтор. <a href="#order" class="order-link">Свяжитесь со мной</a>, чтобы обсудить ваш гобелен.</p>
         </div>
     </div>
 </section>
 
     <!-- БЛОК "УСЛУГИ" -->
     <section class="services section" id="services">
-        <div class="container">
-            <h2 class="section__title">Услуги</h2>
-            <div class="services__grid">
-                <div class="service-card">
-                    <h3>🎨 Гобелены на заказ</h3>
-                    <p>Создаю уникальные гобелены с учётом ваших пожеланий.</p>
-                </div>
-                <div class="service-card">
-                    <h3>🧵 Мастер-классы</h3>
-                    <p>Провожу онлайн и офлайн занятия по ткачеству и вышивке.</p>
-                </div>
-                <div class="service-card">
-                    <h3>✨ Punch needle</h3>
-                    <p>Ковровая вышивка, которая украсит ваш интерьер.</p>
-                </div>
-            </div>
+        <div class="container"> <!-- Это нужно вернуть -->
+        <h2 class="section__title">Услуги</h2>
+        <div class="services__grid">
+    <div class="service-card">
+        <h3>🎨 Гобелены на заказ</h3>
+        <p>Уникальные тканые панно в технике ручного ткачества. Работаю в природной, глубокой палитре.</p>
+        <div class="service-meta">
+            <span class="service-price">от 7 000 ₽</span>
+            <span class="service-time">⏱ 2–6 недель</span>
         </div>
+    </div>
+    <div class="service-card">
+        <h3>🧵 Ковровая вышивка</h3>
+        <p>Пушистые и фактурные панно в технике punch needle. Идеально для уютных интерьеров.</p>
+        <div class="service-meta">
+            <span class="service-price">от 4 000 ₽</span>
+            <span class="service-time">⏱ 1–3 недели</span>
+        </div>
+    </div>
+    <div class="service-card">
+        <h3>✨ Мастер-классы</h3>
+        <p>Обучение ткачеству и вышивке онлайн и офлайн. Все материалы предоставляю.</p>
+        <div class="service-meta">
+            <span class="service-price">от 2 500 ₽</span>
+            <span class="service-time">групповое / индивидуальное</span>
+        </div>
+    </div>
+</div>
     </section>
+
+    <!-- БЛОК "КАК ЗАКАЗАТЬ" -->
+<section class="order-steps section" id="order">
+    <div class="container">
+        <h2 class="section__title">Как заказать работу</h2>
+        <ol class="steps-list">
+            <li><strong>Напишите мне</strong> в VK или на почту. Расскажите о своих пожеланиях: размер, цветовая гамма, сюжет, настроение.</li>
+            <li><strong>Я назову точную цену и сроки</strong> (ориентиры — в разделе «Услуги»).</li>
+            <li><strong>Мы согласовываем эскиз.</strong> Я вношу правки, если нужно.</li>
+            <li><strong>Я тку гобелен.</strong> Присылаю фото процесса.</li>
+            <li><strong>Вы получаете готовую работу</strong> (отправляю по России или отдаю лично в Перми).</li>
+        </ol>
+    </div>
+</section>
 
     <!-- БЛОК "КОНТАКТЫ" -->
     <section class="contacts section" id="contacts">
