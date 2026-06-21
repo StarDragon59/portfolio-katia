@@ -43,7 +43,7 @@ function renderAvatar() {
     if (!avatarContainer) return;
     
     const img = document.createElement('img');
-    img.src = "images/avatar.jpg.jpg";
+    img.src = "images/avatar.jpg.jpg.jpg";
     img.alt = "Фото Кати";
     img.classList.add('avatar-image');
     
